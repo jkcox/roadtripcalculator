@@ -23,7 +23,6 @@ extract($controller->view->vars);
 	<div class="search-area-home container">
 		<h1>CHOOSE YOUR ROUTE</h1>
 		<div class="route">
-		
 		<form action="/results" method="get">
 			<span id="legs">
 				<select name="route" id="start">
@@ -32,15 +31,8 @@ extract($controller->view->vars);
 				</select>
 			</span>
 		</form>
-<!-- 			<span id="end">
-			<select data-placeholder="Choose a city..." style="width:200px;" class="chosen-select">
-			 <?php //echo $route; ?>
-			</select>
-			</span> -->
-			<!-- <input type="submit" value="Find Attractions!"></input> -->	
 			</div>
 			<div>
-			<!-- <button type="add" id="add" class="add" style="display:none;">Add another route</button> -->
 			<button type="submit" class="finished" style="display:none;">Find Attractions!</button>
 			</div>
 		<div class="map">

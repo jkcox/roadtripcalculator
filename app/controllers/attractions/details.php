@@ -16,8 +16,6 @@ class Controller extends AppController {
 
 			$this->view->attraction .= AttractionDetailsViewFragment::build($item);
 		}
-
-			$this->view->city1 = $attraction['city1'];
 		}
 	}	
 }
@@ -28,8 +26,7 @@ extract($controller->view->vars);
 
 ?>
 <div class="route-results background">
-<?php echo $city1; ?>
 	<div class="route-results container">
-	<?php echo $attraction ?>
+		<?php echo $attraction ?>
 	</div>
 </div>

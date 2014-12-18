@@ -2,6 +2,14 @@
 
 Class AttractionsViewFragment extends ViewFragment {
 
-		protected $template = '<div class="attraction"><a href="/attractions?attraction={{attraction_id}}"><img src="{{picture}}"></a><h4>{{name}}</h4></div>';
+		protected $template = '
+			<a class="fancybox" rel="{{route_id}}" href="/attractions?attraction={{attraction_id}}">
+				<div class="attraction">
+					<img src="{{picture}}">
+					<h2><span>{{name}}</span></h2>
+				</div>
+			</a>';
 
 }
+
+

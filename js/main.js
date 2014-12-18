@@ -1,10 +1,11 @@
-/**
- * Application JS
- */
 (function() {
 
 	//trip variable
 	var trip = [];
+	//Fancybox activated
+	$(".fancybox").fancybox({
+		type: "iframe"
+	});
 
 	// When the last dropdown menu is clicked
 	$('#legs').on('change', 'select:last-of-type', function() {
@@ -46,6 +47,7 @@
 		$(this).trigger('change');
 	});
 
+	//When submit button is clicked
 	$('.finished').on('click', function() {
 
 		var routes = [];
@@ -58,10 +60,6 @@
 
 		location.href = ('/results?route=' + route);
 	});
-
-
-
-	
 
 	// //once #start is changed adds 2nd dropdown menu
 	// $("#start").one('change', function(){
@@ -80,25 +78,5 @@
 	// $("#add").click(function(){
 	// 	$( "<select name='route' id='start'><option value='' selected>--Please Select--</option><?php echo $route; ?></select>" ).appendTo( $( ".container" ) );
 	// });
-
-
-	//once add leg is clicked, does ajax call to put route into var trip
-	// $('#add').click(function(event){
-	// 	event.preventDefault();
-	// 	//add leg to trip array
-	// 	var route_id = $('option').attr('route-id');
-	// 	trip.push(route_id);
-	// 	//assign id to select box
-	// 	var n = trip.length;
-	// 	var select_id = 'selectleg' + (n+1);
-	// 	var new_leg = selectTemplate.replace('{{leg_id}}', select_id);
-	// 	$("#legs").append(new_leg);
-
-	// 	//getCities ajax call
-	// 	var city_id = $('#selectleg' + n).val();
-	// 	getConnectingCities(city_id, select_id);
-
-	// });
-
 
 })();
